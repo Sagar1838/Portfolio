@@ -2,24 +2,22 @@ import { CornerBrackets } from "@/components/ui/CornerBrackets";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionNumber } from "@/components/ui/SectionNumber";
 import { StaggeredTextReveal } from "@/components/ui/StaggeredTextReveal";
-import { resume } from "@/data/resume";
+import { education } from "@/data/education";
 
-export function ResumeSection() {
-  const { education } = resume;
-
+export function EducationSection() {
   return (
     <section
-      id="resume"
+      id="education"
       className="relative z-10 w-full"
       style={{ backgroundColor: "#0A0A0A", paddingTop: 80, paddingBottom: 120 }}
     >
       <div className="section-container">
         <SectionNumber number="05" />
         <h2 className="text-center font-display text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
-          <StaggeredTextReveal>{resume.headline}</StaggeredTextReveal>
+          <StaggeredTextReveal>EDUCATION</StaggeredTextReveal>
         </h2>
         <p className="mx-auto mt-4 max-w-xl text-center font-display text-ash">
-          {resume.subcopy}
+          Academic foundation in computer engineering.
         </p>
 
         <RevealOnScroll className="mt-12 flex justify-center">
@@ -55,13 +53,15 @@ export function ResumeSection() {
               </span>
             </div>
 
-            <div className="mt-6 flex flex-col items-start justify-between gap-4 sm:flex-row sm:items-center">
-              <span className="font-mono text-sm text-pure-white">{education.period}</span>
+            <div className="mt-6 flex flex-col items-start gap-3">
               <span className="pill-pulse border px-4 py-1.5 font-mono text-[13px] font-medium text-highlight"
                 style={{ borderColor: "rgba(212,175,55,0.6)" }}
               >
                 {education.cgpa}
               </span>
+              {education.period !== "—" && (
+                <span className="font-mono text-sm text-pure-white">{education.period}</span>
+              )}
             </div>
 
             <div className="my-6 h-px w-full bg-lead" />
@@ -69,17 +69,6 @@ export function ResumeSection() {
             <p className="font-display text-[15px] leading-relaxed text-ash">
               {education.summary}
             </p>
-
-            <div className="mt-8">
-              <a
-                href={resume.downloadHref}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex border border-highlight/60 px-5 py-3 font-mono text-[11px] tracking-[0.14em] text-highlight uppercase transition-colors hover:bg-highlight hover:text-ink"
-              >
-                {resume.downloadLabel}
-              </a>
-            </div>
           </div>
         </RevealOnScroll>
       </div>

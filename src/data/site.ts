@@ -15,6 +15,8 @@ export const site = {
     "Frontend Developer with 2 years of experience building and maintaining production web applications at GTCSYS. Skilled in developing responsive, scalable interfaces using ReactJS, TypeScript, and JavaScript, with additional experience in Next.js and Vue.js. Experienced in REST API integration, reusable component development, role-based workflows, and interactive dashboards. Focused on frontend performance, debugging, and reliable releases across development, staging, and production.",
   resumeHref: "/resume/sagar-prajapati-resume.png",
   resumeLabel: "View Resume",
+  portraitSrc: "/images/about-portrait.jpg",
+  portraitAlt: "Portrait of Sagar Prajapati",
 } as const;
 
 export const navLinks: NavLink[] = [
@@ -22,13 +24,12 @@ export const navLinks: NavLink[] = [
   { label: "Skills", href: "#skills" },
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
-  { label: "Resume", href: "#resume" },
-  { label: "Contact", href: "#contact" },
+  { label: "Education", href: "#education" },
 ];
 
 export const aboutStats: SiteStat[] = [
   { value: "2", label: "Years Experience" },
-  { value: "4", label: "Featured Projects" },
+  { value: "6", label: "Featured Projects" },
   { value: "1", label: "Company" },
 ];
 

@@ -1,12 +1,36 @@
 "use client";
 
-import { useRef, type MouseEvent } from "react";
+import Image from "next/image";
+import { useRef, useState, type MouseEvent } from "react";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionNumber } from "@/components/ui/SectionNumber";
 import { StaggeredTextReveal } from "@/components/ui/StaggeredTextReveal";
 import { projects } from "@/data/projects";
 import type { Project } from "@/types";
+
+function ProjectMedia({ project }: { project: Project }) {
+  const [failed, setFailed] = useState(false);
+
+  if (!project.imageSrc || failed) {
+    return <MediaPlaceholder label={project.imagePlaceholderLabel} />;
+  }
+
+  return (
+    <div className="relative aspect-[16/10] overflow-hidden border border-lead bg-steel">
+      <Image
+        src={project.imageSrc}
+        alt={project.imageAlt ?? project.title}
+        fill
+        sizes="(max-width: 1024px) 100vw, 50vw"
+        className="object-cover object-top"
+        onError={() => setFailed(true)}
+      />
+      <div className="corner-bracket corner-bracket-tl" aria-hidden />
+      <div className="corner-bracket corner-bracket-br" aria-hidden />
+    </div>
+  );
+}
 
 function ProjectCard({ project, index }: { project: Project; index: number }) {
   const mediaRef = useRef<HTMLDivElement>(null);
@@ -29,12 +53,8 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
   };
 
   return (
-    <RevealOnScroll>
-      <article
-        className={`grid items-center gap-10 lg:grid-cols-12 lg:gap-16 ${
-          project.reversed ? "" : ""
-        }`}
-      >
+    <RevealOnScroll threshold={0}>
+      <article className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
         <div
           className={`lg:col-span-6 ${project.reversed ? "lg:order-2" : "lg:order-1"}`}
           onMouseMove={onMove}
@@ -49,7 +69,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
               transition: "transform 0.4s cubic-bezier(0.25, 1, 0.5, 1)",
             }}
           >
-            <MediaPlaceholder label={project.imagePlaceholderLabel} />
+            <ProjectMedia project={project} />
           </div>
           <p className="mt-3 font-mono text-[11px] tracking-[0.12em] text-ash">
             FIG. {String(index + 1).padStart(2, "0")} — PROJECT

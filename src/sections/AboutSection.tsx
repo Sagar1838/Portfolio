@@ -1,4 +1,4 @@
-import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
+import Image from "next/image";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionNumber } from "@/components/ui/SectionNumber";
 import { StaggeredTextReveal } from "@/components/ui/StaggeredTextReveal";
@@ -9,20 +9,37 @@ export function AboutSection() {
     <section id="about" className="relative z-10 w-full section-padding overflow-hidden">
       <div className="section-container relative">
         <div className="grid items-start gap-12 lg:grid-cols-12 lg:gap-16">
-          <RevealOnScroll className="relative lg:col-span-5">
+          <RevealOnScroll className="relative lg:col-span-5" threshold={0}>
             <div className="relative">
-              <MediaPlaceholder
-                label="Portrait photo coming soon"
-                aspectClassName="aspect-[3/4]"
-              />
-              <div className="pointer-events-none absolute top-4 left-4 font-mono text-[10px] tracking-[0.12em] text-cyan-trace">
-                H: 480
-              </div>
-              <div className="pointer-events-none absolute top-4 right-4 font-mono text-[10px] tracking-[0.12em] text-cyan-trace">
-                W: 360
-              </div>
-              <div className="pointer-events-none absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.12em] text-ash">
-                ORIGIN: TL
+              <div className="relative aspect-[3/4] overflow-hidden border border-lead bg-steel">
+                <Image
+                  src={site.portraitSrc}
+                  alt={site.portraitAlt}
+                  fill
+                  sizes="(max-width: 1024px) 100vw, 40vw"
+                  className="object-cover object-[center_20%]"
+                  priority
+                  unoptimized
+                />
+                <div
+                  className="pointer-events-none absolute inset-0"
+                  style={{
+                    background:
+                      "linear-gradient(to top, rgba(10,10,10,0.45) 0%, transparent 35%)",
+                  }}
+                  aria-hidden
+                />
+                <div className="corner-bracket corner-bracket-tl" aria-hidden />
+                <div className="corner-bracket corner-bracket-br" aria-hidden />
+                <div className="pointer-events-none absolute top-4 left-4 font-mono text-[10px] tracking-[0.12em] text-cyan-trace">
+                  H: 1024
+                </div>
+                <div className="pointer-events-none absolute top-4 right-4 font-mono text-[10px] tracking-[0.12em] text-cyan-trace">
+                  W: 752
+                </div>
+                <div className="pointer-events-none absolute bottom-4 left-4 font-mono text-[10px] tracking-[0.12em] text-ash">
+                  ORIGIN: TL
+                </div>
               </div>
               <p className="mt-4 font-mono text-xs tracking-[0.12em] text-ash uppercase">
                 {site.name}

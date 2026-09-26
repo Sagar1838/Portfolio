@@ -21,6 +21,9 @@ export interface ExperienceRole {
   period: string;
   figureLabel: string;
   bullets: string[];
+  /** Public path, e.g. `/images/experience/gtcsys-frontend.png` */
+  imageSrc?: string;
+  imageAlt?: string;
   imagePlaceholderLabel: string;
 }
 
@@ -30,6 +33,9 @@ export interface Project {
   subtitle: string;
   description: string[];
   tags: string[];
+  /** Public path, e.g. `/images/projects/project-management-saas.jpg` */
+  imageSrc?: string;
+  imageAlt?: string;
   imagePlaceholderLabel: string;
   reversed: boolean;
 }

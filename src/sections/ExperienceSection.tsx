@@ -1,8 +1,34 @@
+"use client";
+
+import Image from "next/image";
 import { MediaPlaceholder } from "@/components/ui/MediaPlaceholder";
 import { RevealOnScroll } from "@/components/ui/RevealOnScroll";
 import { SectionNumber } from "@/components/ui/SectionNumber";
 import { StaggeredTextReveal } from "@/components/ui/StaggeredTextReveal";
 import { experience } from "@/data/experience";
+import type { ExperienceRole } from "@/types";
+
+function ExperienceMedia({ role }: { role: ExperienceRole }) {
+  if (!role.imageSrc) {
+    return <MediaPlaceholder label={role.imagePlaceholderLabel} />;
+  }
+
+  return (
+    <div className="relative aspect-[16/9] overflow-hidden border border-lead bg-steel">
+      <Image
+        src={role.imageSrc}
+        alt={role.imageAlt ?? role.title}
+        fill
+        sizes="(max-width: 1024px) 100vw, 40vw"
+        className="object-cover object-center"
+        unoptimized
+        priority
+      />
+      <div className="corner-bracket corner-bracket-tl" aria-hidden />
+      <div className="corner-bracket corner-bracket-br" aria-hidden />
+    </div>
+  );
+}
 
 export function ExperienceSection() {
   return (
@@ -21,12 +47,12 @@ export function ExperienceSection() {
             const imageFirst = index % 2 === 0;
 
             return (
-              <RevealOnScroll key={role.id}>
+              <RevealOnScroll key={role.id} threshold={0}>
                 <article className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
                   <div
                     className={`lg:col-span-5 ${imageFirst ? "lg:order-1" : "lg:order-2"}`}
                   >
-                    <MediaPlaceholder label={role.imagePlaceholderLabel} />
+                    <ExperienceMedia role={role} />
                     <p className="mt-3 font-mono text-[11px] tracking-[0.12em] text-ash">
                       {role.figureLabel}
                     </p>

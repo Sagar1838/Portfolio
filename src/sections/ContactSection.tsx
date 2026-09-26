@@ -8,7 +8,7 @@ export function ContactSection() {
     <section id="contact" className="relative z-10 w-full section-padding">
       <div className="section-container">
         <SectionNumber number="06" />
-        <h2 className="max-w-4xl font-display text-[clamp(2.5rem,7vw,5.5rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
+        <h2 className="max-w-3xl font-display text-[clamp(1.75rem,4vw,3rem)] leading-[0.95] font-medium tracking-[-0.03em] text-pure-white uppercase">
           <StaggeredTextReveal>{"LET'S BUILD SOMETHING"}</StaggeredTextReveal>
         </h2>
 
