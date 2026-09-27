@@ -1,4 +1,4 @@
-import type { NavLink, SiteStat, SocialLink } from "@/types";
+import type { NavLink, SocialLink } from "@/types";
 
 export const site = {
   name: "Sagar Prajapati",
@@ -25,12 +25,6 @@ export const navLinks: NavLink[] = [
   { label: "Experience", href: "#experience" },
   { label: "Projects", href: "#projects" },
   { label: "Education", href: "#education" },
-];
-
-export const aboutStats: SiteStat[] = [
-  { value: "2", label: "Years Experience" },
-  { value: "6", label: "Featured Projects" },
-  { value: "1", label: "Company" },
 ];
 
 export const socialLinks: SocialLink[] = [

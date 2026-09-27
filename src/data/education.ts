@@ -6,6 +6,4 @@ export const education: Education = {
   location: "Ahmedabad, India",
   period: "—",
   cgpa: "CGPA: 8.48 / 10",
-  summary:
-    "Bachelor of Technology in Computer Engineering from Silver Oak College of Engineering and Technology, Ahmedabad.",
 };

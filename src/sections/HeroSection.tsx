@@ -6,7 +6,7 @@ export function HeroSection() {
   return (
     <section
       id="top"
-      className="relative flex min-h-svh w-full items-end overflow-hidden"
+      className="relative flex min-h-svh w-full items-center justify-center overflow-hidden"
     >
       <div
         className="absolute inset-0"
@@ -27,30 +27,21 @@ export function HeroSection() {
         aria-hidden
       />
 
-      <div className="section-container relative z-10 w-full pb-16 pt-28 lg:pb-24 lg:pt-32">
-        <div className="relative max-w-5xl border border-lead/80 p-6 sm:p-10 lg:p-14">
+      <div className="section-container relative z-10 w-full py-28 lg:py-32">
+        <div className="relative mx-auto max-w-5xl border border-lead/80 px-5 py-10 text-center sm:p-10 lg:p-14">
           <CornerBrackets />
 
-          <p className="mb-6 font-mono text-[11px] uppercase tracking-[0.18em] text-highlight">
-            Portfolio / {site.location.split(",")[0]}
-          </p>
-
-          <h1 className="font-display text-[clamp(2.5rem,8vw,6rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
+          <h1 className="font-display text-[clamp(2.25rem,8vw,6rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
             <StaggeredTextReveal>{site.name.toUpperCase()}</StaggeredTextReveal>
           </h1>
 
-          <p className="mt-6 font-mono text-[clamp(0.85rem,2vw,1.1rem)] tracking-[0.18em] text-ash uppercase">
+          <p className="mt-6 font-mono text-[clamp(0.8rem,2vw,1.1rem)] tracking-[0.18em] text-ash uppercase">
             <StaggeredTextReveal mode="word">{site.roleLine}</StaggeredTextReveal>
           </p>
 
-          <p className="mt-4 max-w-xl font-display text-base text-ash sm:text-lg">
+          <p className="mx-auto mt-4 max-w-xl font-display text-base text-ash sm:text-lg">
             {site.location}
           </p>
-        </div>
-
-        <div className="mt-12 flex items-center gap-3 font-mono text-[11px] tracking-[0.16em] text-ash uppercase">
-          <span className="scroll-bob inline-block h-8 w-px bg-ash/50" aria-hidden />
-          <span>Scroll to explore</span>
         </div>
       </div>
     </section>

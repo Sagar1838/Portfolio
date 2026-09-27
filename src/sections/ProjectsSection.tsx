@@ -54,7 +54,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
 
   return (
     <RevealOnScroll threshold={0}>
-      <article className="grid items-center gap-10 lg:grid-cols-12 lg:gap-16">
+      <article className="grid items-center gap-8 lg:grid-cols-12 lg:gap-16">
         <div
           className={`lg:col-span-6 ${project.reversed ? "lg:order-2" : "lg:order-1"}`}
           onMouseMove={onMove}
@@ -82,7 +82,7 @@ function ProjectCard({ project, index }: { project: Project; index: number }) {
           <p className="font-mono text-[11px] tracking-[0.14em] text-highlight uppercase">
             {project.subtitle}
           </p>
-          <h3 className="mt-3 font-display text-[clamp(1.6rem,3vw,2.4rem)] leading-tight text-pure-white">
+          <h3 className="mt-3 font-display text-[clamp(1.4rem,3vw,2.4rem)] leading-tight text-pure-white">
             {project.title}
           </h3>
           <div className="mt-5 space-y-3">
@@ -116,14 +116,14 @@ export function ProjectsSection() {
     <section id="projects" className="relative z-10 w-full section-padding">
       <div className="section-container">
         <SectionNumber number="04" />
-        <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
+        <h2 className="text-center font-display text-[clamp(2rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
           <StaggeredTextReveal>SELECTED WORKS</StaggeredTextReveal>
         </h2>
-        <p className="mt-4 max-w-xl font-display text-[clamp(1rem,1.5vw,1.25rem)] text-ash">
+        <p className="mx-auto mt-4 max-w-xl text-center font-display text-[clamp(1rem,1.5vw,1.25rem)] text-ash">
           Projects that define my craft.
         </p>
 
-        <div className="mt-14 space-y-16 lg:space-y-32">
+        <div className="mt-12 space-y-16 lg:mt-14 lg:space-y-32">
           {projects.map((project, index) => (
             <ProjectCard key={project.id} project={project} index={index} />
           ))}

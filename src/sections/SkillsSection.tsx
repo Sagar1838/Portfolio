@@ -29,14 +29,14 @@ export function SkillsSection() {
     <section id="skills" className="relative z-10 w-full section-padding">
       <div className="section-container">
         <SectionNumber number="02" />
-        <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
+        <h2 className="text-center font-display text-[clamp(2rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
           <StaggeredTextReveal>TECHNICAL ARSENAL</StaggeredTextReveal>
         </h2>
-        <p className="mt-4 max-w-xl font-display text-[clamp(1rem,1.5vw,1.25rem)] text-ash">
+        <p className="mx-auto mt-4 max-w-xl text-center font-display text-[clamp(1rem,1.5vw,1.25rem)] text-ash">
           Technologies and tools I work with daily.
         </p>
 
-        <div className="mt-12 grid gap-5 md:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-12 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {skillCategories.map((category, index) => (
             <RevealOnScroll key={category.name} delayMs={index * 70}>
               <article className="skill-card flex h-full flex-col border border-lead p-6 transition-all duration-700">

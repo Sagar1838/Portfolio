@@ -2,9 +2,9 @@ import type { Metadata, Viewport } from "next";
 import { JetBrains_Mono, Space_Grotesk } from "next/font/google";
 import { AmbientDotCanvas } from "@/components/effects/AmbientDotCanvas";
 import { CustomCursor } from "@/components/effects/CustomCursor";
+import { BackToTopButton } from "@/components/layout/BackToTopButton";
 import { Footer } from "@/components/layout/Footer";
 import { Navigation } from "@/components/layout/Navigation";
-import { WhatsAppButton } from "@/components/layout/WhatsAppButton";
 import { site } from "@/data/site";
 import "./globals.css";
 
@@ -42,7 +42,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
         <Navigation />
         {children}
         <Footer />
-        <WhatsAppButton />
+        <BackToTopButton />
       </body>
     </html>
   );

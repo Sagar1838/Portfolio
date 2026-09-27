@@ -35,27 +35,24 @@ export function ExperienceSection() {
     <section id="experience" className="relative z-10 w-full section-padding">
       <div className="section-container">
         <SectionNumber number="03" />
-        <h2 className="font-display text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
+        <h2 className="font-display text-[clamp(2rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
           <StaggeredTextReveal>EXPERIENCE</StaggeredTextReveal>
         </h2>
         <p className="mt-4 max-w-xl font-display text-[clamp(1rem,1.5vw,1.25rem)] text-ash">
-          Production frontend work across ReactJS, TypeScript, Next.js, and Vue.js.
+          Professional journey &amp; contributions.
         </p>
 
-        <div className="mt-14 space-y-20 lg:space-y-28">
+        <div className="mt-12 space-y-16 lg:mt-14 lg:space-y-28">
           {experience.map((role, index) => {
             const imageFirst = index % 2 === 0;
 
             return (
               <RevealOnScroll key={role.id} threshold={0}>
-                <article className="grid items-center gap-10 lg:grid-cols-12 lg:gap-14">
+                <article className="grid items-center gap-8 lg:grid-cols-12 lg:gap-14">
                   <div
                     className={`lg:col-span-5 ${imageFirst ? "lg:order-1" : "lg:order-2"}`}
                   >
                     <ExperienceMedia role={role} />
-                    <p className="mt-3 font-mono text-[11px] tracking-[0.12em] text-ash">
-                      {role.figureLabel}
-                    </p>
                   </div>
 
                   <div

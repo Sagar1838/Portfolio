@@ -8,20 +8,16 @@ export function EducationSection() {
   return (
     <section
       id="education"
-      className="relative z-10 w-full"
-      style={{ backgroundColor: "#0A0A0A", paddingTop: 80, paddingBottom: 120 }}
+      className="relative z-10 w-full bg-ink section-padding"
     >
       <div className="section-container">
         <SectionNumber number="05" />
-        <h2 className="text-center font-display text-[clamp(2.25rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
+        <h2 className="text-center font-display text-[clamp(2rem,5vw,4rem)] leading-[0.9] font-medium tracking-[-0.03em] text-pure-white uppercase">
           <StaggeredTextReveal>EDUCATION</StaggeredTextReveal>
         </h2>
-        <p className="mx-auto mt-4 max-w-xl text-center font-display text-ash">
-          Academic foundation in computer engineering.
-        </p>
 
         <RevealOnScroll className="mt-12 flex justify-center">
-          <div className="relative w-full max-w-[800px] border border-lead p-8 lg:p-12">
+          <div className="relative w-full max-w-[800px] border border-lead p-6 sm:p-8 lg:p-12">
             <CornerBrackets pulse={false} />
 
             <div className="mb-4 flex items-center gap-2">
@@ -63,12 +59,6 @@ export function EducationSection() {
                 <span className="font-mono text-sm text-pure-white">{education.period}</span>
               )}
             </div>
-
-            <div className="my-6 h-px w-full bg-lead" />
-
-            <p className="font-display text-[15px] leading-relaxed text-ash">
-              {education.summary}
-            </p>
           </div>
         </RevealOnScroll>
       </div>

@@ -3,11 +3,6 @@ export interface NavLink {
   href: string;
 }
 
-export interface SiteStat {
-  value: string;
-  label: string;
-}
-
 export interface SkillCategory {
   name: string;
   countLabel: string;
@@ -19,7 +14,6 @@ export interface ExperienceRole {
   company: string;
   title: string;
   period: string;
-  figureLabel: string;
   bullets: string[];
   /** Public path, e.g. `/images/experience/gtcsys-frontend.png` */
   imageSrc?: string;
@@ -46,7 +40,6 @@ export interface Education {
   location: string;
   period: string;
   cgpa: string;
-  summary: string;
 }
 
 export interface SocialLink {

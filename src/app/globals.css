@@ -40,6 +40,7 @@
 
 html {
   scroll-behavior: smooth;
+  scroll-padding-top: 64px;
 }
 
 body {
@@ -47,6 +48,7 @@ body {
   color: var(--pure-white);
   font-family: var(--font-display);
   cursor: none;
+  overflow-x: clip;
 }
 
 @media (pointer: coarse) {

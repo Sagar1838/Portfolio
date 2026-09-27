@@ -55,7 +55,7 @@ export function CustomCursor() {
 
   if (!enabled) return null;
 
-  const size = hovering ? 32 : 16;
+  const size = hovering ? 20 : 14;
 
   return (
     <div
