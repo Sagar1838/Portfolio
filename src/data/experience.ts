@@ -4,7 +4,7 @@ export const experience: ExperienceRole[] = [
   {
     id: "gtcsys-frontend",
     company: "GTCSYS Technology Partners",
-    title: "ReactJS Developer / Frontend Developer",
+    title: "Frontend Developer",
     period: "Jan 2025 — Present",
     imageSrc: "/images/experience/workspace-developer.png",
     imageAlt: "Developer desk with triple monitors, code IDE, keyboard, and warm lamp",
