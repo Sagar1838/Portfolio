@@ -6,8 +6,8 @@ export const projects: Project[] = [
     title: "Project Management SaaS Platform",
     subtitle: "Workflows · Timesheets · Resource Ops",
     description: [
-      "Multi-tenant SaaS platform for managing projects, tasks, sprints, teams, timesheets, resource allocation, reporting, and collaboration through a centralized workspace.",
-      "Built List, Kanban, Table, Calendar, and Workload views with drag-and-drop, dependencies, filters, and custom workflows. Developed Timesheet, Leave Management, and Resource Allocation with complex permissions and KPI dashboards, plus real-time collaboration via Socket.IO.",
+      "Multi-tenant SaaS platform for managing projects, tasks, sprints, teams, timesheets, resource allocation, reporting, and collaboration through a centralized workspace. Built List, Kanban, Table, Calendar, and Workload views with drag-and-drop, dependencies, filters, and custom workflows. Developed Timesheet, Leave Management, and Resource Allocation with complex permissions and KPI dashboards, plus real-time collaboration via Socket.IO.",
+      "Built project and task workflows across List, Kanban, Table, Calendar, and Workload views, including dependencies, filters, and custom workflows. Contributed to Timesheet, Timelog Approval, Leave Management, Resource Allocation, and Resource Activity Report features, including role-based permissions, calculations, and KPI dashboards."
     ],
     tags: ["Vue 3", "Vuex", "Socket.IO", "FullCalendar", "Chart.js"],
     imageSrc: "/images/projects/project-management-saas.png",
@@ -21,7 +21,7 @@ export const projects: Project[] = [
     subtitle: "CRM · Bidding · Map Discovery",
     description: [
       "Proptech platform for brokerage teams to manage investment property listings, investors, bids, property discovery, and outreach through a centralized workspace.",
-      "Built property lifecycle, investor CRM, and bid management features with Mapbox discovery, synchronized map/list views, and URL-driven search, filtering, sorting, and pagination across modules.",
+      "Built property management, investor CRM, and bid management features, supporting property workflows such as media publishing, scheduling, and document management. Integrated Mapbox-based property discovery with synchronized map/list views and URL-driven search, filtering, sorting, and pagination."
     ],
     tags: ["Next.js", "TypeScript", "Mapbox", "TanStack Query", "Tailwind CSS"],
     imageSrc: "/images/projects/real-estate-investment.png",

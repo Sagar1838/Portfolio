@@ -12,7 +12,7 @@ export const site = {
   phone: "+91 97246 61838",
   phoneRaw: "919724661838",
   summary:
-    "Frontend Developer with 2 years of experience building and maintaining production web applications at GTCSYS. Skilled in developing responsive, scalable interfaces using ReactJS, TypeScript, and JavaScript, with additional experience in Next.js and Vue.js. Experienced in REST API integration, reusable component development, role-based workflows, and interactive dashboards. Focused on frontend performance, debugging, and reliable releases across development, staging, and production.",
+  "Frontend Developer with 2 years of experience in frontend development, including building and maintaining production web applications at GTCSYS. Skilled in developing responsive, scalable interfaces using React, TypeScript, and JavaScript, with additional experience in Next.js and Vue.js. Experienced in REST API integration, reusable component development, role-based workflows, and interactive dashboards. Focused on frontend performance, debugging, and reliable releases across development, staging, and production.",
   resumeHref: "/resume/sagar-prajapati-resume.png",
   resumeLabel: "View Resume",
   portraitSrc: "/images/about-portrait.jpg",

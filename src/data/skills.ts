@@ -2,10 +2,10 @@ import type { SkillCategory } from "@/types";
 
 export const skillCategories: SkillCategory[] = [
   {
-    name: "Core",
+    name: "Frontend Development",
     countLabel: "8 technologies",
     tags: [
-      "ReactJS",
+      "React",
       "Next.js",
       "Vue.js",
       "JavaScript (ES6+)",
@@ -16,26 +16,40 @@ export const skillCategories: SkillCategory[] = [
     ],
   },
   {
-    name: "State & Data",
-    countLabel: "7 technologies",
+    name: "State Management & APIs",
+    countLabel: "8 technologies",
     tags: [
       "Redux",
       "Redux Thunk",
       "Vuex",
       "TanStack Query",
+      "React Router",
       "REST APIs",
       "Axios",
       "Socket.IO",
     ],
   },
   {
-    name: "UI & Forms",
-    countLabel: "4 technologies",
-    tags: ["Tailwind CSS", "PrimeReact", "React Hook Form", "Formik"],
+    name: "UI Libraries & Forms",
+    countLabel: "7 technologies",
+    tags: [
+      "Tailwind CSS",
+      "PrimeReact",
+      "React Hook Form",
+      "Formik",
+      "TanStack Table",
+    ],
   },
   {
-    name: "Tools & Services",
+    name: "Tools & Platforms",
     countLabel: "6 tools",
-    tags: ["GitHub", "Postman", "Webpack", "Vite", "Firebase", "Figma"],
+    tags: [
+      "GitHub",
+      "Postman",
+      "Webpack",
+      "Vite",
+      "Firebase",
+      "Figma",
+    ],
   },
 ];

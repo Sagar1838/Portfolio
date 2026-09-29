@@ -1,7 +1,7 @@
 import type { Education } from "@/types";
 
 export const education: Education = {
-  institution: "SILVER OAK COLLEGE OF ENGINEERING & TECHNOLOGY",
+  institution: "Silver Oak College of Engineering and Technology,",
   degree: "Bachelor of Technology (B.Tech) in Computer Engineering",
   location: "Ahmedabad, India",
   period: "—",
